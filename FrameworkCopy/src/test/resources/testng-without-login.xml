@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Without login" verbose="1" >
+    <test name="Without login" >
+        <classes>
+            <class name="com.epam.ta.test.ItemTest"/>
+            <class name="com.epam.ta.test.SearchTest"/>
+        </classes>
+    </test>
+</suite>
