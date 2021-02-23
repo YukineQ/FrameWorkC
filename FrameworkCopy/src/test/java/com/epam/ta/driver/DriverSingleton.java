@@ -21,21 +21,14 @@ public class DriverSingleton {
             switch (System.getProperty("browser")){
                 case "google": {
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
                     break;
                 }
                 case "opera": {
                     WebDriverManager.operadriver().setup();
-                    driver = new OperaDriver();
                     break;
                 }
                 default: {
                     ProfilesIni profile = new ProfilesIni();
-                    FirefoxProfile myprofile = profile.getProfile("testXYZ");
-                    FirefoxOptions options=new FirefoxOptions();
-                    options.setProfile(myprofile);
-                    WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver(options);
                     break;
                 }
             }
